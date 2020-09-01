@@ -1,0 +1,19 @@
+<p>
+  <button (click)="logout()">Logout</button>
+</p>
+<p>
+  <input type="text" placeholder="Filter">
+</p>
+<table border="1">
+  <tr>
+    <td><a href="#" (click)="sort('id')">Id</a></td>
+    <td><a href="#" (click)="sort('name')">Name</a></td>
+    <td><a href="#" (click)="sort('email')">Email</a></td>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td>
+  </tr>
+</table>
+
