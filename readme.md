@@ -2,8 +2,6 @@
 
 ## Repository Content
 
---- 
-
 ### Client
 Angular application with 2 pages:
 * `Login` - login form
@@ -13,13 +11,19 @@ Angular application with 2 pages:
 Path: `client/src/app/main`
 ![Main Component](./assets/main-comp.jpg)
 
+--- 
+
 #### Login Component
 Path: `client/src/app/login`
 ![LoginComp](./assets/login-comp.jpg)
 
+--- 
+
 #### Users Component
 Path: `client/src/app/users`
 ![UsersComp](./assets/users-como.jpg)
+
+--- 
 
 #### App Service
 Application logic.
@@ -36,9 +40,13 @@ Express web server (Node.js) with 2 end-points:
 Path: `server/src/routes/login.js`
 ![LoginFlow](./assets/login-flow.jpg)
 
+--- 
+
 #### Users Flow
 Path: `server/src/routes/users.js`
 ![LoginFlow](./assets/users-flow.jpg)
+
+--- 
 
 #### Useful files
 * Middleware `server/src/middleware.js`
