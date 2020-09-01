@@ -11,6 +11,12 @@ Angular application with 2 pages (components):
 #### Main Component
 ![Main Component](./assets/main-comp.jpg)
 
+#### Login Component
+![LoginComp](./assets/login-comp.jpg)
+
+#### Users Component
+![UsersComp](./assets/users-comp.jpg)
+
 ### Server
 Express web server (Node.js) with 2 end-points:
 * `/login`
