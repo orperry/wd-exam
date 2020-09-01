@@ -2,20 +2,30 @@
 
 ## Repository Content
 
+--- 
+
 ### Client
-Angular application with 2 pages (components):
+Angular application with 2 pages:
 * `Login` - login form
 * `Users` - dynamic list of users
 
-### Client Components
 #### Main Component
+Path: `client/src/app/main`
 ![Main Component](./assets/main-comp.jpg)
 
 #### Login Component
+Path: `client/src/app/login`
 ![LoginComp](./assets/login-comp.jpg)
 
 #### Users Component
+Path: `client/src/app/users`
 ![UsersComp](./assets/users-como.jpg)
+
+#### App Service
+Application logic.
+Path `client/src/app/app.service.ts`
+
+---
 
 ### Server
 Express web server (Node.js) with 2 end-points:
@@ -23,11 +33,19 @@ Express web server (Node.js) with 2 end-points:
 * `/users`
 
 #### Login Flow
+Path: `server/src/routes/login.js`
 ![LoginFlow](./assets/login-flow.jpg)
 
 #### Users Flow
+Path: `server/src/routes/users.js`
 ![LoginFlow](./assets/users-flow.jpg)
 
+#### Useful files
+* Middleware `server/src/middleware.js`
+* Users database `server/src/core/database.js`
+* Utils functions (data accessors) `server/src/utils.js`
+
+---
 
 
 # Tasks
@@ -50,6 +68,13 @@ Express web server (Node.js) with 2 end-points:
    You can leave the applications run during the exam. Any change you'll make to the code will be reloaded automatically.
    You can restart applications by running the same command again.
 
+5. Navigate to the application:
+   ```shell script
+   http://localhost:4200
+   ```
+   Hint: You can access the server directly using `http://localhost:3000`
+   
+   
 ## 2 Login Form
 Implement login form in `login.component.html` file. Each field should have input validation.
 * Email field (email should be valid)
