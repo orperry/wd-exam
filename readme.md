@@ -22,6 +22,8 @@ Express web server (Node.js) with 2 end-points:
 * `/login`
 * `/users`
 
+#### Login Flow
+![LoginFlow](./assets/login-flow.jpg)
 
 ## Task #1 Environment
 1. Open terminal (cli) and clone this repository:
