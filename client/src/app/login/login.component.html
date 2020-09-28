@@ -1,10 +1,23 @@
 <form (submit)="login()">
   <h1>Login Form</h1>
   <div class="form-group">
-    <input type="email" class="form-control" id="email" placeholder="Email" [(ngModel)]="email" name="email">
+    <input type="email" class="form-control" id="email" placeholder="Email" [(ngModel)]="email" name="email" #loginEmail="ngModel" required email>
+  </div>
+  <div *ngIf="loginEmail.invalid && (loginEmail.dirty || loginEmail.touched)" class="alert alert-danger">
+    <div *ngIf="loginEmail.errors.required">
+      Email is required.
+    </div>
+    <div *ngIf="loginEmail.errors.email">
+      Email is not valid.
+    </div>
   </div>
   <div class="form-group">
-    <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="password" name="password">
+    <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="password" name="password" #passwd="ngModel" required>
+  </div>
+  <div *ngIf="passwd.invalid && (passwd.dirty || passwd.touched)" class="alert alert-danger">
+    <div *ngIf="passwd.errors.required">
+      Password is required.
+    </div>
   </div>
   <button type="submit" class="btn btn-default">Login</button>
 </form>
