@@ -11,7 +11,8 @@ async function getUserByEmail(email) {
 
 async function getUsers(filter) {
     filter = filter || '';
-    return db.users;
+    const results = db.users.filter(it => it.name.includes(filter));
+    return results;
 }
 
 module.exports = {getUserByEmail, getUsers, SESSION};

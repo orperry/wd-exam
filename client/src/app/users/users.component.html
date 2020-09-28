@@ -2,7 +2,7 @@
   <button (click)="logout()">Logout</button>
 </p>
 <p>
-  <input type="text" placeholder="Filter">
+  <input #filterBox type="text" placeholder="Filter" (input)="getUsers(filterBox.value)">
 </p>
 <table border="1">
   <tr>

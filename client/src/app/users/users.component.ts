@@ -20,11 +20,11 @@ export class UsersComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getUsers();
+    this.getUsers(this.filter);
   }
 
-  getUsers(): void {
-    this.service.getUsers(this.filter).subscribe(users => {
+  getUsers(filter): void {
+    this.service.getUsers(filter).subscribe(users => {
       this.users = users;
     });
   }
