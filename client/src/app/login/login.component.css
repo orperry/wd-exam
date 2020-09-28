@@ -1,0 +1,9 @@
+@import "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css";
+
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948;
+  }
+  
+.ng-invalid:not(form)  {
+    border-left: 5px solid #721c24;
+  }

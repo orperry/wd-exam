@@ -1,4 +1,4 @@
-<form (submit)="login()">
+<form (submit)="login()" #loginForm="ngForm" class="col-2">
   <h1>Login Form</h1>
   <div class="form-group">
     <input type="email" class="form-control" id="email" placeholder="Email" [(ngModel)]="email" name="email" #loginEmail="ngModel" required email>
@@ -19,5 +19,5 @@
       Password is required.
     </div>
   </div>
-  <button type="submit" class="btn btn-default">Login</button>
+  <button type="submit" class="btn btn-primary" [disabled]="!loginForm.form.valid">Login</button>
 </form>
