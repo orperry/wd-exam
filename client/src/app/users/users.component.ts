@@ -34,5 +34,8 @@ export class UsersComponent implements OnInit {
   }
 
   sort(by: string): void {
+    this.service.getUsers(this.filter).subscribe(users => {
+      this.users = users.sort((a, b) => (a[by] > b[by]) ? 1 : -1);
+    });
   }
 }
